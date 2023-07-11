@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-str1 = "Last digit of" + "{number:d}"
-str2 = "is" + " " + "{number[-1]" + " "
+last_digit = abs(number) % 10
+string = "Last digit of {} is {}" .format(number, last_digit)
 
-if number[-1] > 5:
-    print("str1 + str2 + and is greater than 5")
-elif number[-1] == 0:
-    print("str1 + str2 + and is 0")
-elif number[-1] < 6 and != 0:
-    print("str1 + str2 + and is less than 6 and not 0")
+if last_digit > 5:
+    print(string + " " + "and is greater than 5")
+elif last_digit == 0:
+    print(string + " " + "and is 0")
+elif last_digit < 6 and last_digit != 0:
+    print(string + " " + "and is less than 6 and not 0")
