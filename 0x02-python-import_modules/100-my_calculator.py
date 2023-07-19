@@ -19,5 +19,4 @@ if __name__ == "__main__":
         print('{:d} {:s} {:d} = {:d}'.format(num1, argv[2], num2, result))
     else:
         print('Unknown operator. Available operators: +, -, * and /')
-        exit(1)
-    exit(0)
+        sys.exit(1)
