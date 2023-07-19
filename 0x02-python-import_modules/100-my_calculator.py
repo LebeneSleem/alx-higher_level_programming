@@ -11,12 +11,10 @@ if __name__ == "__main__":
 
     ops = {"+": add, "-": sub, "*": mul, "/": div}
 
-    if argv[2] in ops:
-        num1 = int(argv[1])
-        num2 = int(argv[3])
-        op = ops[argv[2]]
-        result = op(num1, num2)
-        print('{:d} {:s} {:d} = {:d}'.format(num1, argv[2], num2, result))
-    else:
-        print('Unknown operator. Available operators: +, -, * and /')
+    if sys.argv[2] not in list(ops.keys()):
+        print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
+
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
+    print("{} {} {} = {}".format(a, sys.argv[2], b, ops[sys.argv[2]](a, b)))
