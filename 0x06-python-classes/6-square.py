@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-# Python classes by Lebene Gbebleou-Sleem
 
 """creating a class to defines a Square"""
+
 
 class Square:
 
