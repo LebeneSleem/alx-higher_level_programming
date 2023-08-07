@@ -5,14 +5,14 @@
 
 class Rectangle:
     """Rectangle Class with property and setter"""
-    instances = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Private optional instance attributte"""
 
         self.width = width
         self.height = height
-        Rectangle.instances += 1
+        Rectangle._number_of_instances += 1
 
     @property
     def width(self):
@@ -64,4 +64,4 @@ class Rectangle:
     def __del__(self):
         """Destructor that prints a message when the instance is deleted"""
         print("Bye rectangle...")
-        Rectangle.instances -=1
+        Rectangle.number_of_instances -=1
