@@ -55,6 +55,6 @@ class Rectangle:
         rectangle_str = "#" * self.__width
         return ("\n".join(rectangle_str for _ in range(self.__height)))
 
-    ef __repr__(self):
+    def __repr__(self):
         """Representation of the rectangle"""
-        return (f"Rectangle({self.__width}, {self.__height})")
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
