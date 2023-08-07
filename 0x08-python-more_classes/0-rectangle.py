@@ -3,7 +3,7 @@
 
 
 
-class Rectangular:
+class Rectangle:
     """Empty Class to define a Rectangule"""
     ...
     """Do nothing"""
