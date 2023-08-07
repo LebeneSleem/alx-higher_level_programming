@@ -64,3 +64,4 @@ class Rectangle:
     def __del__(self):
         """Destructor that prints a message when the instance is deleted"""
         print("Bye rectangle...")
+        Rectangle.instances -=1
