@@ -1,0 +1,36 @@
+Test Cases for say_my_name Function:
+
+Using "say_my_name" function from the "3-say_my_name.py" file
+---------------------------
+
+Importing function from the module:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Print the full name with both first and last names
+>>> say_my_name("Lebene", "Gbebleou-Sleem")
+My name is Lebene Gbebleou-Sleem
+
+Print the full name with only the first name
+>>> say_my_name("Bridgette")
+My name is Bridgette 
+
+Print the full name with an empty first name
+>>> say_my_name("", "Smith")
+My name is  Smith
+
+Print the full name with empty first and last names
+>>> say_my_name("", "")
+My name is  
+
+Print the full name with non-string first name
+>>> say_my_name(123, "Johnson")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+Print the full name with non-string last name
+>>> say_my_name("Mary", 456)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
