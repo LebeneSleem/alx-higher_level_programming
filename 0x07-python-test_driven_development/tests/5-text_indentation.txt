@@ -1,0 +1,31 @@
+Test Cases for text_indentation Function:
+
+Using "text_indentation" function from the "5-text_indentation.py" file
+------------------
+
+Importing function from the module:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test with a simple sentence
+>>> text_indentation("Hello. How are you?")
+Hello.
+How are you?
+
+Test with multiple sentences
+>>> text_indentation("This is a test. Is it working? Yes, it is.")
+This is a test.
+Is it working?
+Yes, it is.
+
+Test with empty string
+>>> text_indentation("")
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+Test with integer input
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
