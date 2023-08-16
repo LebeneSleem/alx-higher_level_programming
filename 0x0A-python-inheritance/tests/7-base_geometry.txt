@@ -1,0 +1,33 @@
+Importing class from the module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+----------------------------------------
+Test the integer_validator method of the BaseGeometry class.
+
+>>> geom = BaseGeometry()
+
+# Valid cases
+>>> geom.integer_validator("width", 10)
+>>> geom.integer_validator("height", 15)
+>>> geom.integer_validator("radius", 5)
+
+# Invalid cases
+>>> geom.integer_validator("zero", 0)
+Traceback (most recent call last):
+    ...
+ValueError: zero must be greater than 0
+>>> geom.integer_validator("negative", -5)
+Traceback (most recent call last):
+    ...
+ValueError: negative must be greater than 0
+>>> geom.integer_validator("string_value", "not_an_integer")
+Traceback (most recent call last):
+    ...
+TypeError: string_value must be an integer
+>>> geom.integer_validator("list_value", [1, 2, 3])
+Traceback (most recent call last):
+    ...
+TypeError: list_value must be an integer
+>>> geom.integer_validator("dict_value", {"key": "value"})
+Traceback (most recent call last):
+    ...
+TypeError: dict_value must be an integer
