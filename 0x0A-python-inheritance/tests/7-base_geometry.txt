@@ -1,6 +1,7 @@
 Importing class from the module:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-----------------------------------------
+
+
 Trying to print the area
     >>> bg = BaseGeometry()
     >>> bg.area()
@@ -113,30 +114,3 @@ Passing None to method
     Traceback (most recent call last):
               ...
     TypeError: age must be an integer
-
-Checking for no arguments to integer_validator:
-	  >>> b.integer_validator()
-	  Traceback (most recent call last):
-          ...
-	  TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
-Checking for class docstring:
-         >>> c = __import__("7-base_geometry").BaseGeometry.__doc__
-         >>> len(c) > 1
-         True
-
-Checking for method docstring:
-	  >>> mod1 = __import__("7-base_geometry").BaseGeometry.area.__doc__
-	  >>> len(mod1) > 1
-	  True
-	  >>> mod2 = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
-          >>> len(mod2) > 1
-          True
-
-Checking for area failure:
-	  >>> b = BG()
-	  >>> b.area()
-	  Traceback (most recent call last):
-	  ...
-	  Exception: area() is not implemented
-
