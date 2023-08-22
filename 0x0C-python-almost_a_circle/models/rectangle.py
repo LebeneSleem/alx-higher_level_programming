@@ -70,7 +70,6 @@ class Rectangle(Base):
         for _ in range(self.__height):
             print("#" * self.__width)
 
-
     def __str__(self):
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id,
                                                 self.__x, self.__y,
