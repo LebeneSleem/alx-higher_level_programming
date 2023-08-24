@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 """This model is for a first class Base"""
+import csv
+import json
+import os
+import turtle
 
 
 class Base:
