@@ -1,7 +1,7 @@
 #!/usr/bin/node
 function printArgs () {
   let Args = 0;
-  for (let i = 2; i < process.argv.length; i++) {
+  for (let i = 2; process.argv[i] !== undefined; i++) {
     Args++;
   }
 
