@@ -4,34 +4,20 @@ This script displays all values in the states table of
 hbtn_0e_0_usa where the name matches the provided argument.
 """
 
+#!/usr/bin/python3
+"""  lists all states from the database hbtn_0e_0_usa """
 import MySQLdb
 import sys
 
 
-if __name__ == '__main__':
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database_name = sys.argv[3]
-    state_name = sys.argv[4]
-
-    db_connection = MySQLdb.connect(
-        host="localhost",
-        user=username,
-        passwd=password,
-        db=database_name,
-        port=3306
-    )
-
-    db_cursor = db_connection.cursor()
-
-    sql_query = "SELECT * FROM states WHERE name = %s ORDER BY states.id"
-
-    db_cursor.execute(sql_query, (state_name,))
-
-    rows_selected = db_cursor.fetchall()
-
-    for row in rows_selected:
+if __name__ == "__main__":
+    db = MySQLdb.connect(host="localhost", user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3], port=3306)
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
+                .format(sys.argv[4]))
+    rows = cur.fetchall()
+    for row in rows:
         print(row)
-
-    db_cursor.close()
-    db_connection.close()
+    cur.close()
+    db.close()
