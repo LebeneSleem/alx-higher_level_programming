@@ -9,7 +9,9 @@ from model_state import Base, State
 
 if __name__ == '__main__':
     if len(sys.argv) != 4:
-        print("Usage: {} <username> <password> <database_name>".format(sys.argv[0]))
+        usage_message = "Usage: {} <username> <password> <database_name>".format(
+            sys.argv[0])
+        print(usage_message)
         sys.exit(1)
 
     username = sys.argv[1]
