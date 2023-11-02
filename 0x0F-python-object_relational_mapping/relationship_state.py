@@ -6,7 +6,11 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from model_city import Base, City
 
+
 class State(Base):
+    """
+    Defines a class base
+    """
     __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
