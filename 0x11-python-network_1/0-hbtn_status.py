@@ -7,7 +7,8 @@ import urllib.request
 
 def fetch_hbtn_status():
     """
-    Fetches the status from https://alx-intranet.hbtn.io and displays the response.
+    Fetches the status from https://alx-intranet.hbtn.io
+    and displays the response.
     """
     url = 'https://alx-intranet.hbtn.io/status'
 
@@ -24,6 +25,7 @@ def fetch_hbtn_status():
             print(f"    - utf8 content: {decoded_content}")
         else:
             print(f"    - utf8 content: Unable to decode")
+
 
 if __name__ == "__main__":
     fetch_hbtn_status()
